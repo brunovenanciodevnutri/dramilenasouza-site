@@ -78,7 +78,7 @@
   .location-link:hover { color: var(--color-ink); }
   .clinic-locations { display: grid; gap: 10px; margin-top: 26px; }
   .clinic-location { position: relative; display: grid; gap: 4px; padding: 17px 44px 17px 19px; border: 1px solid rgba(174,140,85,.38); background: rgba(255,255,255,.45); transition: border-color .25s ease, background .25s ease, transform .25s ease; }
-  .clinic-location::after { content: "↗"; position: absolute; top: 50%; right: 18px; color: var(--color-gold); transform: translateY(-50%); }
+  .clinic-location::after { position: absolute; top: 50%; right: 18px; color: var(--color-gold); transform: translateY(-50%); }
   .clinic-location:hover { border-color: var(--color-gold); background: white; transform: translateX(3px); }
   .clinic-location span { color: var(--color-gold); font-size: .58rem; letter-spacing: .16em; text-transform: uppercase; }
   .clinic-location strong { font-family: var(--font-display); font-size: 1.22rem; font-weight: 500; line-height: 1.2; }
