@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "dramilenasouza-571c7"
-  }
+    "default": "dramilenasouza-571c7",
+    "dramilenasouzaharmonizacao": "dramilenasouzaharmonizacao"
+  },
+  "targets": {},
+  "etags": {}
 }
