@@ -98,10 +98,11 @@
   .video-sound-prompt:hover { background: rgba(174,140,85,.94); transform: translate(-50%,-50%) scale(1.03); }
   .video-sound-prompt:focus-visible { outline: 2px solid white; outline-offset: 3px; }
   .video-sound-prompt[hidden] { display: none; }
+  .video-play-icon { width: 0; height: 0; border-top: 5px solid transparent; border-bottom: 5px solid transparent; border-left: 8px solid currentColor; }
   .video-caption { position: absolute; top: 34px; right: 34px; max-width: 290px; padding: 18px 21px; color: white; background: rgba(20,18,14,.76); border-left: 2px solid var(--color-gold); backdrop-filter: blur(8px); pointer-events: none; }
   .video-caption span { display: block; margin-bottom: 5px; color: #d9c39a; font-size: .6rem; letter-spacing: .18em; text-transform: uppercase; }
   .video-caption strong { font-family: var(--font-display); font-size: 1.25rem; font-weight: 500; line-height: 1.2; }
-  .cases-header { display: flex; align-items: end; justify-content: space-between; gap: 30px; margin: 105px 0 36px; }
+  .cases-header { display: flex; align-items: end; justify-content: space-between; gap: 30px; margin: 105px 0 36px; scroll-margin-top: 100px; }
   .cases-header h3 { margin: 9px 0 0; font-family: var(--font-display); font-size: clamp(2.2rem,4vw,4rem); font-weight: 500; line-height: 1; }
   .cases-header h3 em { color: var(--color-gold); }
   .carousel-controls { display: flex; gap: 9px; flex: none; }
