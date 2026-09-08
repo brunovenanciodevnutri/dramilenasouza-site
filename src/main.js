@@ -38,6 +38,22 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('.reveal').forEach((element) => observer.observe(element))
 document.querySelector('#year').textContent = new Date().getFullYear()
 
+const methodVideo = document.querySelector('#method-video')
+
+if (methodVideo) {
+  const videoObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        methodVideo.play().catch(() => {})
+      } else {
+        methodVideo.pause()
+      }
+    })
+  }, { threshold: 0.5 })
+
+  videoObserver.observe(methodVideo)
+}
+
 const casesCarousel = document.querySelector('#cases-carousel')
 const casesProgress = document.querySelector('#cases-progress')
 const previousCaseButtons = document.querySelectorAll('[data-carousel-prev]')

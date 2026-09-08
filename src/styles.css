@@ -84,7 +84,7 @@
   .clinic-location strong { font-family: var(--font-display); font-size: 1.22rem; font-weight: 500; line-height: 1.2; }
   .clinic-location small { color: var(--color-muted); font-size: .7rem; line-height: 1.5; }
   .clinic-secondary-note { margin: 20px 0 0; padding-left: 14px; border-left: 1px solid var(--color-gold); color: var(--color-muted); font-size: .76rem; line-height: 1.7; }
-  .clinic-secondary-note a { color: var(--color-gold); font-weight: 600; transition: color .25s ease; }
+  .clinic-secondary-note a { display: block; margin-top: 3px; color: var(--color-gold); font-weight: 600; transition: color .25s ease; }
   .clinic-secondary-note a:hover { color: var(--color-ink); }
   .harmonic-intro { max-width: 840px; margin: 0 auto 30px; text-align: center; }
   .harmonic-intro h2 { margin: 14px 0 24px; font-size: clamp(3.2rem, 6.4vw, 6.8rem); font-weight: 500; line-height: .92; letter-spacing: -.04em; }
