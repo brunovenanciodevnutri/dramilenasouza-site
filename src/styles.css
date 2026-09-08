@@ -94,6 +94,10 @@
   .harmonic-signature span { width: 42px; height: 1px; background: rgba(174,140,85,.55); }
   .method-video { position: relative; max-width: 980px; margin-inline: auto; padding: 12px; border: 1px solid rgba(174,140,85,.5); background: #f7f6f2; box-shadow: var(--shadow-luxury); }
   .method-video video { display: block; width: 100%; max-height: 680px; background: #151411; object-fit: contain; }
+  .video-sound-prompt { position: absolute; inset: 50% auto auto 50%; z-index: 2; display: flex; align-items: center; gap: 10px; padding: 14px 20px; border: 1px solid rgba(255,255,255,.72); border-radius: 999px; color: white; background: rgba(20,18,14,.82); font-size: .75rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; box-shadow: 0 10px 30px rgba(0,0,0,.3); backdrop-filter: blur(8px); transform: translate(-50%,-50%); transition: background .25s ease, transform .25s ease; }
+  .video-sound-prompt:hover { background: rgba(174,140,85,.94); transform: translate(-50%,-50%) scale(1.03); }
+  .video-sound-prompt:focus-visible { outline: 2px solid white; outline-offset: 3px; }
+  .video-sound-prompt[hidden] { display: none; }
   .video-caption { position: absolute; top: 34px; right: 34px; max-width: 290px; padding: 18px 21px; color: white; background: rgba(20,18,14,.76); border-left: 2px solid var(--color-gold); backdrop-filter: blur(8px); pointer-events: none; }
   .video-caption span { display: block; margin-bottom: 5px; color: #d9c39a; font-size: .6rem; letter-spacing: .18em; text-transform: uppercase; }
   .video-caption strong { font-family: var(--font-display); font-size: 1.25rem; font-weight: 500; line-height: 1.2; }

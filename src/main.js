@@ -39,12 +39,29 @@ document.querySelectorAll('.reveal').forEach((element) => observer.observe(eleme
 document.querySelector('#year').textContent = new Date().getFullYear()
 
 const methodVideo = document.querySelector('#method-video')
+const methodVideoSound = document.querySelector('#method-video-sound')
 
 if (methodVideo) {
+  methodVideo.muted = false
+  methodVideo.defaultMuted = false
+  methodVideo.volume = 1
+
+  const playMethodVideoWithSound = async () => {
+    methodVideo.muted = false
+    methodVideo.volume = 1
+
+    try {
+      await methodVideo.play()
+      if (methodVideoSound) methodVideoSound.hidden = true
+    } catch {
+      if (methodVideoSound) methodVideoSound.hidden = false
+    }
+  }
+
   const videoObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        methodVideo.play().catch(() => {})
+        playMethodVideoWithSound()
       } else {
         methodVideo.pause()
       }
@@ -52,6 +69,11 @@ if (methodVideo) {
   }, { threshold: 0.5 })
 
   videoObserver.observe(methodVideo)
+
+  methodVideoSound?.addEventListener('click', playMethodVideoWithSound)
+  methodVideo.addEventListener('playing', () => {
+    if (methodVideoSound) methodVideoSound.hidden = true
+  })
 }
 
 const casesCarousel = document.querySelector('#cases-carousel')
