@@ -7,7 +7,7 @@
   --color-line: #ded8cc;
   --color-gold: #a48752;
   --color-title-accent: #ad8d56;
-  --color-action: rgb(143, 112, 64);
+  --color-action: rgb(144, 113, 66);
   --color-muted: #756963;
   --font-sans: "Urbanist", Arial, sans-serif;
   --font-display: "Bodoni Moda", Georgia, serif;
@@ -62,7 +62,7 @@
   .button:hover .link-arrow { transform: translateX(5px); }
   .gold-button { color: white; border-color: var(--color-gold); background: var(--color-gold); }
   .gold-button:hover { background: #8f5238; }
-  .button:not(.hero-cta) { color: white; border-color: var(--color-action); background: var(--color-action); box-shadow: 0 10px 24px rgba(143,112,64,.16); }
+  .button:not(.hero-cta) { color: white; border-color: var(--color-action); background: var(--color-action); box-shadow: 0 10px 24px rgba(144,113,66,.16); }
   .button:not(.hero-cta):hover { color: white; border-color: #725832; background: #725832; box-shadow: 0 13px 28px rgba(114,88,50,.22); }
   .hero-cta { min-height: 50px; padding: 15px 24px; border-color: #8f693b; border-radius: 2px 16px 2px 2px; color: white; background: #8f693b; box-shadow: 0 12px 28px rgba(143,105,59,.25); }
   .hero-cta .link-arrow { color: #f1d9b4; }
@@ -189,7 +189,7 @@
   .mentorship-main-photo figcaption { position: absolute; right: 22px; bottom: 22px; left: 22px; z-index: 1; color: white; font-family: var(--font-display); font-size: 1.25rem; line-height: 1.2; }
   .floating-whatsapp { position: fixed !important; right: 24px; bottom: 24px; z-index: 9999; display: grid; width: 66px; height: 66px; padding: 0; place-items: center; border: 0; opacity: 1; visibility: visible; pointer-events: auto; background: transparent; filter: drop-shadow(0 10px 16px rgba(0,0,0,.22)); isolation: isolate; transition: transform .3s ease, filter .3s ease; }
   .floating-whatsapp img { display: block; width: 100%; height: 100%; object-fit: contain; }
-  .floating-whatsapp:hover { transform: translateY(-3px) scale(1.03); filter: drop-shadow(0 13px 20px rgba(0,0,0,.28)); }
+  .floating-whatsapp:hover { transform: translateY(-3px) scale(1.03); filter: drop-shadow(0 13px 20px rgba(0,0,0,.30)); }
   .floating-whatsapp:focus-visible { outline: 2px solid var(--color-gold); outline-offset: 4px; }
   .profile-quote-section { padding: 0; color: var(--color-ink); background: #eee9df; }
   .profile-quote-layout { display: grid; grid-template-columns: 1.08fr .92fr; align-items: stretch; gap: 0; }
@@ -261,7 +261,7 @@
   .hero-kicker { color: #8f693b; }
   .hero-message h1 em { color: rgb(226, 188, 146); }
   .hero-description { border-color: #9a7040; color: #4f413c; }
-  .hero-cta { border-color: #c9a56a; border-radius: 999px; color: #fff8e9; background: linear-gradient(135deg,#a47f4b,#8f7040); box-shadow: 0 12px 32px rgba(143,112,64,.24),0 0 0 1px rgba(255,244,215,.12) inset; font-family: var(--font-display); font-size: .92rem; font-weight: 600; letter-spacing: .14em; }
+  .hero-cta { border-color: #c9a56a; border-radius: 999px; color: #fff8e9; background: linear-gradient(135deg,#c5780c,#907142); box-shadow: 0 12px 32px rgba(144,113,66,.24),0 0 0 1px rgba(255,244,215,.12) inset; font-family: var(--font-display); font-size: .92rem; font-weight: 600; letter-spacing: .14em; }
   .hero-cta .link-arrow { color: #e2bc92; }
   .hero-cta:hover { color: white; border-color: #cda65f; background: linear-gradient(135deg,#a77e45,#79582f); box-shadow: 0 16px 36px rgba(92,65,37,.28); }
 }
@@ -310,7 +310,7 @@
   .hero-message { position: absolute; inset: 0; z-index: 2; display: flex; width: 100%; align-items: center; justify-content: flex-end; padding: 0 18px 90px; color: white; text-align: center; }
   .hero-kicker { position: absolute; top: 104px; left: 50%; display: flex; width: min(268px,calc(100% - 54px)); align-items: center; justify-content: center; gap: 9px; margin: 0; padding: 11px 12px; border: 1px solid rgba(218,181,114,.82); border-radius: 999px; color: #f1d39a; background: linear-gradient(135deg,rgba(54,44,39,.72),rgba(43,35,34,.66)); box-shadow: 0 10px 30px rgba(0,0,0,.15),0 0 0 1px rgba(255,255,255,.04) inset; backdrop-filter: blur(8px); font-size: .76rem; letter-spacing: .07em; transform: translateX(-50%); }
   .hero-kicker::before, .hero-kicker::after { content: ""; width: 15px; height: 1px; flex: none; background: rgba(226,190,126,.9); }
-  .hero-message h1 { margin: 0; color: white; font-size: clamp(3.45rem,15.5vw,4.15rem); line-height: .85; text-shadow: 0 8px 34px rgba(0,0,0,.28); }
+  .hero-message h1 { margin: 0; color: white; font-size: clamp(3.45rem,15.5vw,4.15rem); line-height: .85; text-shadow: 0 8px 34px rgba(0,0,0,.30); }
   .hero-message h1 em { color: rgb(226, 188, 146); }
   .hero-description { max-width: 330px; margin: 18px auto 20px; padding: 0; border: 0; color: white; font-size: .68rem; line-height: 1.55; text-shadow: 0 2px 16px rgba(0,0,0,.55); }
   .hero-cta { justify-content: center; width: fit-content; min-height: 0; padding: 13px 30px; border-color: #d9b36e; border-radius: 999px; color: #fff1d4; background: linear-gradient(135deg,rgba(62,48,40,.7),rgba(43,35,34,.62)); box-shadow: 0 12px 32px rgba(0,0,0,.24),0 0 0 1px rgba(255,244,215,.08) inset; backdrop-filter: blur(6px); font-family: var(--font-display); font-size: 1rem; font-weight: 600; letter-spacing: .14em; }
