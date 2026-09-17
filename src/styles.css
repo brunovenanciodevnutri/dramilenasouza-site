@@ -257,7 +257,7 @@
 .is-open .menu-icon { background: transparent; }.is-open .menu-icon::before { top: 0; transform: rotate(45deg); }.is-open .menu-icon::after { top: 0; transform: rotate(-45deg); }
 
 @media (min-width: 901px) {
-  .immersive-hero { position: relative; height: 100vh; min-height: 760px; max-height: 980px; padding: 0; overflow: hidden; color: white; background: #211b18; }
+  .immersive-hero { position: relative; height: 100vh; min-height: 760px; max-height: 972px; padding: 0; overflow: hidden; color: white; background: #211b18; }
   .immersive-hero .hero-shell { position: relative; display: block; width: 100%; max-width: none; height: 100%; }
   .hero-visual { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; border-radius: 0; background: #211b18; transform: none; }
   .hero-visual::after { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(90deg,rgba(18,14,13,.42) 0%,rgba(18,14,13,.18) 46%,rgba(18,14,13,.32) 100%),linear-gradient(180deg,rgba(18,14,13,.28) 0%,rgba(18,14,13,.08) 34%,rgba(18,14,13,.22) 58%,rgba(18,14,13,.72) 100%); pointer-events: none; }
@@ -415,7 +415,7 @@
   .contact-meta-item + .contact-meta-item { border-top: 1px solid rgba(58,47,43,.18); border-left: 0; }
   .site-footer .site-container { flex-direction: column; gap: 24px; text-align: center; }
   .closing-quote { padding: 6px 0 72px; }
-  .closing-quote-mark { height: 30px; font-size: 3.7rem; }
+  .closing-quote-mark { height: 30px; font-size: 3.65rem; }
   .closing-quote blockquote { margin-top: 16px; font-size: 2rem; }
   .closing-signature span { width: 30px; }
 }
