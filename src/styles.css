@@ -65,17 +65,6 @@
   .section-heading h2 { margin: 0; font-size: 2.1rem; line-height: .95; text-transform: uppercase; }
   .section-heading h2 span { display: block; font-weight: 300; }
   .section-stroke { width: 54px; height: 1px; flex: none; background: var(--color-gold); }
-  .mini-link { display: flex; justify-content: space-between; border: 1px solid #c9c6bf; padding: 25px 22px; background: white; font-size: .73rem; letter-spacing: .08em; text-transform: uppercase; transition: .3s; }
-  .mini-link:hover { padding-left: 29px; color: white; border-color: var(--color-ink); background: var(--color-ink); }
-  .treatment-row { display: grid; grid-template-columns: 190px 1fr; gap: 28px; align-items: center; padding-block: 15px; border-bottom: 1px solid var(--color-line); }
-  .treatment-row img { height: 138px; }
-  .treatment-row h3 { margin: 0 0 8px; font-family: var(--font-display); font-size: 1.6rem; }
-  .treatment-row p { color: #777; font-size: .78rem; line-height: 1.7; }
-  .result-feature { position: relative; height: 695px; overflow: hidden; }
-  .result-card { position: relative; height: 337px; overflow: hidden; }
-  .result-card img, .result-feature img { transition: transform .6s ease; }
-  .result-card:hover img, .result-feature:hover img { transform: scale(1.035); }
-  .result-card::after, .result-feature::after { content: "Resultados individuais"; position: absolute; bottom: 14px; left: 14px; padding: 9px 12px; background: rgba(255,255,255,.92); font-size: .58rem; letter-spacing: .12em; text-transform: uppercase; }
   .experience-section { position: relative; overflow: hidden; padding: 112px 0; color: white; background: linear-gradient(135deg,#292a2c 0%,#343538 55%,#27282a 100%); }
   .experience-layout { display: grid; grid-template-columns: 1.05fr .95fr; align-items: center; gap: 64px; }
   .experience-section h2 { max-width: 570px; margin: 16px 0 25px; font-family: var(--font-display); font-size: clamp(3.1rem,4.8vw,5.6rem); font-weight: 500; line-height: .9; letter-spacing: -.035em; }
@@ -160,12 +149,9 @@
   .procedure-content > p { max-width: 660px; margin: 0 0 26px; color: var(--color-muted); font-size: .82rem; line-height: 1.75; }
   .procedure-content > p:last-child { margin-bottom: 0; }
   .procedure-gallery { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; }
-  .procedure-gallery figure, .procedure-placeholder { height: 330px; margin: 0; overflow: hidden; background: var(--color-soft); }
+  .procedure-gallery figure { height: 330px; margin: 0; overflow: hidden; background: var(--color-soft); }
   .procedure-gallery figure img { transition: transform .6s ease; }
   .procedure-gallery figure:hover img { transform: scale(1.035); }
-  .procedure-placeholder { display: grid; place-content: center; border: 1px dashed rgba(174,140,85,.55); color: var(--color-gold); text-align: center; }
-  .procedure-placeholder span { font-family: var(--font-accent); font-size: 2.5rem; font-weight: 300; line-height: 1; }
-  .procedure-placeholder p { margin: 12px 0 0; font-size: .62rem; letter-spacing: .15em; line-height: 1.7; text-transform: uppercase; }
   .mentorship-grid { display: grid; grid-template-columns: .84fr 1.16fr; align-items: center; gap: 86px; }
   .mentorship-heading { margin-bottom: 55px; }
   .mentorship-heading h2 { margin: 0; font-family: var(--font-sans); font-size: clamp(1.75rem,2.5vw,2.35rem); font-weight: 400; line-height: .9; letter-spacing: -.035em; text-transform: uppercase; }
@@ -181,11 +167,8 @@
   .mentorship-main-photo { grid-row: 1 / 4; }
   .mentorship-main-photo::after { content: ""; position: absolute; inset: 55% 0 0; background: linear-gradient(transparent,rgba(20,18,14,.72)); }
   .mentorship-main-photo figcaption { position: absolute; right: 22px; bottom: 22px; left: 22px; z-index: 1; color: white; font-family: var(--font-display); font-size: 1.25rem; line-height: 1.2; }
-  .mentorship-photo-placeholder { display: grid; place-content: center; padding: 24px; border: 1px solid rgba(174,140,85,.45); background: var(--color-paper); color: var(--color-gold); text-align: center; }
-  .mentorship-photo-placeholder span { font-family: var(--font-display); font-size: 2.1rem; }
-  .mentorship-photo-placeholder p { max-width: 150px; margin: 13px auto 0; color: var(--color-muted); font-size: .61rem; letter-spacing: .13em; line-height: 1.7; text-transform: uppercase; }
-  .floating-whatsapp { position: fixed; right: 24px; bottom: 24px; z-index: 60; display: block; width: 66px; height: 66px; padding: 0; border: 0; background: transparent; filter: drop-shadow(0 10px 16px rgba(0,0,0,.22)); transition: transform .3s ease, filter .3s ease; }
-  .floating-whatsapp img { width: 100%; height: 100%; object-fit: contain; }
+  .floating-whatsapp { position: fixed !important; right: 24px; bottom: 24px; z-index: 9999; display: grid; width: 66px; height: 66px; padding: 0; place-items: center; border: 0; opacity: 1; visibility: visible; pointer-events: auto; background: transparent; filter: drop-shadow(0 10px 16px rgba(0,0,0,.22)); isolation: isolate; transition: transform .3s ease, filter .3s ease; }
+  .floating-whatsapp img { display: block; width: 100%; height: 100%; object-fit: contain; }
   .floating-whatsapp:hover { transform: translateY(-3px) scale(1.03); filter: drop-shadow(0 13px 20px rgba(0,0,0,.28)); }
   .floating-whatsapp:focus-visible { outline: 2px solid var(--color-gold); outline-offset: 4px; }
   .profile-quote-section { padding: 108px 0; background: #fcfaf6; }
@@ -214,16 +197,10 @@
 
 .header-scrolled { color: var(--color-ink) !important; background: rgba(252,250,246,.94); box-shadow: 0 7px 30px rgba(36,29,31,.07); backdrop-filter: blur(14px); }
 .header-scrolled .brandmark { border-color: var(--color-gold); }
-.intro-ring { top: -100px; left: -80px; width: 340px; height: 340px; opacity: .45; }
-.treatment-ring { top: 155px; left: 34%; width: 500px; height: 500px; opacity: .28; }
-.portrait-frame::before { content: ""; position: absolute; inset: 18px -18px -18px 18px; z-index: 0; border: 1px solid var(--color-gold); }
-.portrait-frame { position: relative; }
-.portrait-frame img { position: relative; z-index: 1; }
-.doctor-frame::before { content: ""; position: absolute; inset: -22px 22px 22px -22px; border: 1px solid var(--color-gold); }
 .clinic-photo::after { content: "Um espaço pensado para você"; position: absolute; bottom: 25px; left: -43px; padding: 17px 22px; background: white; font-family: var(--font-display); font-size: 1.15rem; }
 .reveal { opacity: 0; transform: translateY(32px); transition: opacity .8s ease, transform .8s ease; }
 .reveal.visible { opacity: 1; transform: none; }
-.delay-1 { transition-delay: .12s; }.delay-2 { transition-delay: .24s; }.delay-3 { transition-delay: .36s; }
+.delay-1 { transition-delay: .12s; }
 .mobile-menu { max-height: 0; overflow: hidden; opacity: 0; transition: max-height .4s ease, opacity .3s ease; }
 .mobile-menu.is-open { max-height: 340px; padding-bottom: 20px; opacity: 1; }
 .mobile-menu a { display: block; border-top: 1px solid currentColor; padding: 17px 0; font-size: .72rem; letter-spacing: .15em; text-transform: uppercase; }
@@ -248,7 +225,6 @@
   .profile-quote-photo { height: 520px; }
   .clinic-layout { gap: 42px; }
   .clinic-photo::after { left: 20px; }
-  .result-feature { height: 520px; }
   .case-card { flex-basis: calc((100% - 20px) / 2); }
   .procedure-results-intro { grid-template-columns: 1fr; }
   .procedure-results-intro h3 { margin-top: 18px; }
@@ -262,11 +238,6 @@
   .site-container { width: min(calc(100% - 30px), 700px); }
   .brandtext { font-size: .7rem; }
   .section-heading h2 { font-size: 1.7rem; }
-  .treatment-row { grid-template-columns: 125px 1fr; gap: 17px; }
-  .treatment-row img { height: 110px; }
-  .treatment-row h3 { font-size: 1.25rem; }
-  .result-card { height: 310px; }
-  .result-feature { height: 400px; }
   .immersive-hero { min-height: 720px; height: 100svh; max-height: 900px; }
   .hero-main-photo img { object-position: 54% 20%; }
   .hero-overlay { background: linear-gradient(180deg,rgba(24,18,20,.18) 0%,transparent 30%,rgba(24,18,20,.24) 52%,rgba(24,18,20,.9) 100%); }
@@ -310,7 +281,7 @@
   .procedure-content { padding-bottom: 30px; }
   .procedure-gallery { display: flex; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; }
   .procedure-gallery::-webkit-scrollbar { display: none; }
-  .procedure-gallery figure, .procedure-placeholder { flex: 0 0 86%; height: 310px; scroll-snap-align: start; }
+  .procedure-gallery figure { flex: 0 0 86%; height: 310px; scroll-snap-align: start; }
   .mentorship-copy h3 { font-size: 2.75rem; }
   .mentorship-heading { margin-bottom: 42px; }
   .mentorship-heading h2 { font-size: 1.85rem; }
@@ -318,9 +289,6 @@
   .mentorship-gallery { grid-template-columns: 1fr 1fr; grid-template-rows: 390px repeat(3,145px); gap: 10px; height: auto; }
   .mentorship-main-photo { grid-row: 1; grid-column: 1 / 3; }
   .mentorship-main-photo figcaption { font-size: 1.05rem; }
-  .mentorship-photo-placeholder { padding: 14px 10px; }
-  .mentorship-photo-placeholder span { font-size: 1.5rem; }
-  .mentorship-photo-placeholder p { margin-top: 7px; font-size: .52rem; }
   .floating-whatsapp { right: 15px; bottom: 15px; width: 70px; height: 70px; }
   .profile-quote-section { padding: 74px 0; }
   .profile-quote-copy { padding: 18px 0 18px 22px; }
