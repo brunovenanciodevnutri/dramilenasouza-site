@@ -220,7 +220,7 @@
 .portrait-frame { position: relative; }
 .portrait-frame img { position: relative; z-index: 1; }
 .doctor-frame::before { content: ""; position: absolute; inset: -22px 22px 22px -22px; border: 1px solid var(--color-gold); }
-.clinic-photo::after { content: "Ambiente pensado para acolher"; position: absolute; bottom: 25px; left: -43px; padding: 17px 22px; background: white; font-family: var(--font-display); font-size: 1.15rem; }
+.clinic-photo::after { content: "Um espaço pensado para você"; position: absolute; bottom: 25px; left: -43px; padding: 17px 22px; background: white; font-family: var(--font-display); font-size: 1.15rem; }
 .reveal { opacity: 0; transform: translateY(32px); transition: opacity .8s ease, transform .8s ease; }
 .reveal.visible { opacity: 1; transform: none; }
 .delay-1 { transition-delay: .12s; }.delay-2 { transition-delay: .24s; }.delay-3 { transition-delay: .36s; }
