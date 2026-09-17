@@ -1,6 +1,6 @@
 import './styles.css'
 
-const navigationBar = document.querySelector('#header')
+const navigationBar = document.querySelector('#cabecalho-principal')
 const menuButton = document.querySelector('#menu-toggle')
 const mobileMenu = document.querySelector('#mobile-menu')
 
