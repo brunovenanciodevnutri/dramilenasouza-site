@@ -49,13 +49,11 @@
   .hero-copy h1 { margin: 0; font-family: var(--font-display); font-size: clamp(4.5rem,7vw,7.5rem); font-weight: 500; line-height: .82; letter-spacing: -.04em; text-shadow: 0 8px 34px rgba(0,0,0,.25); }
   .hero-copy h1 em { display: inline-block; color: #e2bc92; font-weight: 500; white-space: nowrap; }
   .hero-description { margin: 24px auto 26px; color: #fff; font-size: .72rem; font-weight: 500; letter-spacing: .2em; line-height: 1.65; text-transform: uppercase; text-shadow: 0 2px 16px rgba(0,0,0,.5); }
-  .hero-note { position: absolute; right: 4%; bottom: 74px; z-index: 3; width: 250px; padding: 8px 0 8px 20px; border-left: 2px solid rgba(218,181,114,.95); color: white; background: transparent; text-align: left; }
-  .hero-note span { display: block; margin-bottom: 8px; color: #edc98b; font-size: .6rem; font-weight: 600; letter-spacing: .19em; text-transform: uppercase; }
-  .hero-note strong { font-family: var(--font-display); font-size: 1.5rem; font-weight: 600; line-height: 1.16; text-shadow: 0 2px 16px #000,0 1px 4px rgba(0,0,0,.9); }
   .button { display: inline-flex; align-items: center; gap: 14px; border: 1px solid currentColor; padding: 15px 23px; font-size: .7rem; letter-spacing: .12em; text-transform: uppercase; transition: .35s ease; }
   .button:hover { color: white; background: var(--color-ink); transform: translateY(-2px); }
-  .button span { font-size: 1.05rem; transition: transform .3s; }
-  .button:hover span { transform: translateX(5px); }
+  .link-arrow { display: inline-block; width: 1.05em; height: 1.05em; flex: none; vertical-align: -.16em; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+  .button .link-arrow { transition: transform .3s; }
+  .button:hover .link-arrow { transform: translateX(5px); }
   .gold-button { color: white; border-color: var(--color-gold); background: var(--color-gold); }
   .gold-button:hover { background: #8f7040; }
   .hero-cta { justify-content: center; padding: 13px 30px; border-color: #d9b36e; border-radius: 999px; color: #fff1d4; background: linear-gradient(135deg,rgba(62,48,40,.7),rgba(43,35,34,.62)); box-shadow: 0 12px 32px rgba(0,0,0,.24),0 0 0 1px rgba(255,244,215,.08) inset; backdrop-filter: blur(6px); font-family: var(--font-display); font-size: 1rem; font-weight: 600; letter-spacing: .14em; }
@@ -72,15 +70,15 @@
   .experience-section .body-copy { max-width: 570px; color: #d1d1cf; }
   .experience-button { margin-top: 8px; }
   .journey-steps { border-top: 1px solid rgba(214,177,137,.35); }
-  .journey-step { display: grid; grid-template-columns: 42px 1fr; gap: 22px; padding: 24px 4px; border-bottom: 1px solid rgba(214,177,137,.2); }
-  .journey-step b { color: #d6b189; font-family: var(--font-display); font-size: 1.7rem; font-weight: 500; }
+  .journey-step { display: grid; grid-template-columns: 28px 1fr; gap: 16px; padding: 24px 4px; border-bottom: 1px solid rgba(214,177,137,.2); }
+  .journey-marker { width: 7px; height: 7px; justify-self: end; margin-top: 6px; border-radius: 50%; background: #d6b189; }
   .journey-step h3 { margin: 0 0 7px; font-size: .73rem; letter-spacing: .16em; text-transform: uppercase; }
   .journey-step p { margin: 0; color: #c1c2bf; font-size: .76rem; line-height: 1.65; }
   .info-row { display: grid; grid-template-columns: 36px 1fr; gap: 15px; padding-bottom: 20px; border-bottom: 1px solid #cecbc3; }
   .info-row > span { color: var(--color-gold); }
   .info-row strong { display: block; margin-bottom: 7px; font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; }
   .info-row p { margin: 0; color: #6e6a62; font-size: .85rem; line-height: 1.7; }
-  .location-link { display: inline-block; margin-top: 5px; color: var(--color-gold); font-size: .68rem; letter-spacing: .08em; text-transform: uppercase; transition: color .25s ease; }
+  .location-link { display: inline-flex; align-items: center; gap: 5px; margin-top: 5px; color: var(--color-gold); font-size: .68rem; letter-spacing: .08em; text-transform: uppercase; transition: color .25s ease; }
   .location-link:hover { color: var(--color-ink); }
   .clinic-locations { display: grid; gap: 10px; margin-top: 26px; }
   .clinic-location { position: relative; display: grid; gap: 4px; padding: 17px 44px 17px 19px; border: 1px solid rgba(174,140,85,.38); background: rgba(255,255,255,.45); transition: border-color .25s ease, background .25s ease, transform .25s ease; }
@@ -90,7 +88,7 @@
   .clinic-location strong { font-family: var(--font-display); font-size: 1.22rem; font-weight: 500; line-height: 1.2; }
   .clinic-location small { color: var(--color-muted); font-size: .7rem; line-height: 1.5; }
   .clinic-secondary-note { margin: 20px 0 0; padding-left: 14px; border-left: 1px solid var(--color-gold); color: var(--color-muted); font-size: .76rem; line-height: 1.7; }
-  .clinic-secondary-note a { display: block; margin-top: 3px; color: var(--color-gold); font-weight: 600; transition: color .25s ease; }
+  .clinic-secondary-note a { display: flex; align-items: center; gap: 5px; width: fit-content; margin-top: 3px; color: var(--color-gold); font-weight: 600; transition: color .25s ease; }
   .clinic-secondary-note a:hover { color: var(--color-ink); }
   .harmonic-intro { max-width: 840px; margin: 0 auto 30px; text-align: center; }
   .harmonic-intro h2 { margin: 14px 0 24px; font-size: clamp(3.2rem, 6.4vw, 6.8rem); font-weight: 500; line-height: .92; letter-spacing: -.04em; }
@@ -114,6 +112,7 @@
   .carousel-controls { display: flex; gap: 9px; flex: none; }
   .carousel-controls button { display: grid; width: 40px; height: 40px; place-items: center; border: 1px solid rgba(174,140,85,.55); border-radius: 50%; color: var(--color-gold); background: rgba(174,140,85,.04); font-size: .9rem; font-weight: 300; transition: .3s ease; }
   .carousel-controls button:hover { color: white; border-color: var(--color-gold); background: var(--color-gold); transform: translateY(-2px); }
+  .carousel-arrow { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
   .cases-carousel { display: flex; gap: 20px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; overscroll-behavior-inline: contain; }
   .cases-carousel::-webkit-scrollbar { display: none; }
   .case-card { position: relative; flex: 0 0 calc((100% - 40px) / 3); aspect-ratio: 1 / 1; overflow: hidden; scroll-snap-align: start; background: var(--color-soft); }
@@ -219,7 +218,6 @@
   .hero-main-photo img { object-position: center 20%; }
   .hero-overlay { background: linear-gradient(180deg,rgba(24,18,20,.16) 0%,rgba(24,18,20,.05) 35%,rgba(24,18,20,.76) 100%); }
   .hero-content-layout { justify-content: center; }
-  .hero-note { display: none; }
   .experience-layout { grid-template-columns: 1fr; gap: 54px; }
   .profile-quote-layout { grid-template-columns: 1fr; gap: 38px; }
   .profile-quote-photo { height: 520px; }
@@ -250,7 +248,7 @@
   .hero-cta { justify-content: center; }
   .experience-section { padding: 82px 0; }
   .experience-section h2 { font-size: 3.25rem; }
-  .journey-step { grid-template-columns: 34px 1fr; gap: 15px; }
+  .journey-step { grid-template-columns: 20px 1fr; gap: 16px; }
   .clinic-layout { gap: 0; }
   .clinic-thumbnails { position: relative; z-index: 3; display: block; width: 100%; height: clamp(295px,80vw,430px); margin: 34px 0 20px; }
   .clinic-thumbnails > div { position: absolute; width: 54%; height: auto; aspect-ratio: 3 / 4; overflow: hidden; background: var(--color-soft); box-shadow: 0 14px 32px rgba(20,18,14,.14); }
