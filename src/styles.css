@@ -333,12 +333,12 @@
   .hero-visual::after { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(180deg,rgba(24,18,20,.18) 0%,transparent 30%,rgba(24,18,20,.24) 52%,rgba(24,18,20,.9) 100%); pointer-events: none; }
   .hero-main-photo img { object-position: 54% 20%; }
   .hero-secondary-photo, .hero-visual-caption { display: none; }
-  .hero-message { position: absolute; inset: 0; z-index: 2; display: flex; width: 100%; align-items: center; justify-content: flex-end; padding: 0 18px 90px; color: white; text-align: center; }
+  .hero-message { position: absolute; inset: 0; z-index: 2; display: flex; width: 100%; align-items: flex-start; justify-content: flex-end; padding: 0 28px 90px; color: white; text-align: left; }
   .hero-kicker { position: absolute; top: 104px; left: 50%; display: flex; width: min(268px,calc(100% - 54px)); align-items: center; justify-content: center; gap: 9px; margin: 0; padding: 11px 12px; border: 1px solid rgba(218,181,114,.82); border-radius: 999px; color: #f1d39a; background: linear-gradient(135deg,rgba(54,44,39,.72),rgba(43,35,34,.66)); box-shadow: 0 10px 30px rgba(0,0,0,.15),0 0 0 1px rgba(255,255,255,.04) inset; backdrop-filter: blur(8px); font-size: .76rem; letter-spacing: .07em; transform: translateX(-50%); }
   .hero-kicker::before, .hero-kicker::after { content: ""; width: 15px; height: 1px; flex: none; background: rgba(226,190,126,.9); }
-  .hero-message h1 { margin: 0; color: white; font-size: clamp(3.45rem,15.5vw,4.15rem); line-height: .85; text-shadow: 0 8px 34px rgba(0,0,0,.30); }
+  .hero-message h1 { margin: 0; color: white; font-size: clamp(3.1rem,13.5vw,3.6rem); line-height: .85; text-shadow: 0 8px 34px rgba(0,0,0,.30); }
   .hero-message h1 em { color: rgb(226, 188, 146); }
-  .hero-description { max-width: 330px; margin: 18px auto 20px; padding: 0; border: 0; color: white; font-size: .68rem; line-height: 1.55; text-shadow: 0 2px 16px rgba(0,0,0,.55); }
+  .hero-description { max-width: 330px; margin: 18px 0 20px; padding: 0; border: 0; color: white; font-size: .68rem; line-height: 1.55; text-shadow: 0 2px 16px rgba(0,0,0,.55); }
   .hero-cta { justify-content: center; width: fit-content; min-height: 0; padding: 13px 30px; border-color: #d9b36e; border-radius: 999px; color: #fff1d4; background: linear-gradient(135deg,rgba(62,48,40,.7),rgba(43,35,34,.62)); box-shadow: 0 12px 32px rgba(0,0,0,.24),0 0 0 1px rgba(255,244,215,.08) inset; backdrop-filter: blur(6px); font-family: var(--font-display); font-size: 1rem; font-weight: 600; letter-spacing: .14em; }
   .hero-cta .link-arrow { display: none; }
   .hero-cta:hover { color: white; border-color: #edcd8f; background: linear-gradient(135deg,rgba(205,159,82,.58),rgba(153,112,57,.42)); box-shadow: 0 16px 36px rgba(0,0,0,.3); }
