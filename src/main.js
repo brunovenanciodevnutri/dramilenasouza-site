@@ -1,10 +1,14 @@
 import './styles.css'
 
-const header = document.querySelector('#header')
+const navigationBar = document.querySelector('#header')
 const menuButton = document.querySelector('#menu-toggle')
 const mobileMenu = document.querySelector('#mobile-menu')
 
-const updateHeader = () => header.classList.toggle('header-scrolled', window.scrollY > 50)
+const getNavigationChangePoint = () => Math.round(navigationBar.getBoundingClientRect().height * 0.7)
+const refreshNavigationSurface = () => {
+  const pageOffset = window.scrollY || document.documentElement.scrollTop
+  navigationBar.classList.toggle('header-scrolled', pageOffset >= getNavigationChangePoint())
+}
 const closeMenu = () => {
   mobileMenu.classList.remove('is-open')
   menuButton.classList.remove('is-open')
@@ -12,8 +16,8 @@ const closeMenu = () => {
   menuButton.setAttribute('aria-label', 'Abrir menu')
 }
 
-window.addEventListener('scroll', updateHeader, { passive: true })
-updateHeader()
+window.addEventListener('scroll', refreshNavigationSurface, { passive: true })
+refreshNavigationSurface()
 
 menuButton.addEventListener('click', () => {
   const open = !mobileMenu.classList.contains('is-open')
@@ -26,17 +30,19 @@ menuButton.addEventListener('click', () => {
 mobileMenu.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMenu))
 window.addEventListener('resize', () => { if (window.innerWidth > 900) closeMenu() })
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible')
-      observer.unobserve(entry.target)
+const entranceWatcher = new IntersectionObserver((records, watcher) => {
+  records.forEach((record) => {
+    if (record.isIntersecting) {
+      record.target.classList.add('is-present')
+      watcher.unobserve(record.target)
     }
   })
-}, { threshold: 0.12 })
+}, { rootMargin: '0px 0px -8% 0px', threshold: 0.04 })
 
-document.querySelectorAll('.reveal').forEach((element) => observer.observe(element))
-document.querySelector('#year').textContent = new Date().getFullYear()
+document.querySelectorAll('.viewport-entry').forEach((element) => entranceWatcher.observe(element))
+
+const formattedYear = new Intl.DateTimeFormat('pt-BR', { year: 'numeric' }).format(Date.now())
+document.querySelectorAll('.current-year').forEach((element) => { element.textContent = formattedYear })
 
 const methodVideo = document.querySelector('#method-video')
 const methodVideoSound = document.querySelector('#method-video-sound')
