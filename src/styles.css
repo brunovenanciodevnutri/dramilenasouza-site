@@ -257,6 +257,7 @@
 .is-open .menu-icon { background: transparent; }.is-open .menu-icon::before { top: 0; transform: rotate(45deg); }.is-open .menu-icon::after { top: 0; transform: rotate(-45deg); }
 
 @media (min-width: 901px) {
+  .case-card { aspect-ratio: 1 / 1; }
   .immersive-hero { position: relative; height: 100vh; min-height: 760px; max-height: 972px; padding: 0; overflow: hidden; color: white; background: #211b18; }
   .immersive-hero .hero-shell { position: relative; display: block; width: 100%; max-width: none; height: 100%; }
   .hero-visual { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; border-radius: 0; background: #211b18; transform: none; }
